@@ -1,0 +1,56 @@
+.main {
+	min-height: 100vh;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	button,
+	input {
+		height: 50px;
+	}
+
+	button {
+		width: 50px;
+		background-color: transparent;
+		border: none;
+		cursor: pointer;
+
+		&:focus,
+		&:hover {
+			svg {
+				transform: rotate(180deg);
+
+				path {
+					fill: #ff7f50;
+				}
+			}
+		}
+
+		&:active {
+			svg path {
+				fill: #c53805;
+			}
+		}
+
+		svg {
+			display: block;
+			height: 20px;
+			margin: 0 auto;
+			transition: transform ease 500ms;
+
+			path {
+				fill: #444;
+				transition: fill ease 250ms;
+			}
+		}
+	}
+
+	input {
+		font-size: 20px;
+		text-align: center;
+		border-radius: 10px;
+		border: 1px solid;
+		margin: 0 25px;
+	}
+}
